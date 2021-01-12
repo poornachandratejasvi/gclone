@@ -31,8 +31,10 @@ if find $FROM* -type f -mmin +15 | read
   # MOVE FILES OLDER THAN 15 MINUTES 
   #rclone move "$FROM" "$TO" --transfers=20 --checkers=20 --delete-after --min-age 15m --log-file=$LOGFILE
   # /usr/bin/gclone --help
-  /usr/bin/gclone copy "$FROM" "$TO" --ignore-existing  --min-age 15m  --progress
+  /usr/bin/gclone copy "$FROM" "$TO" --ignore-existing  --min-age 15m  --log-level=INFO --log-file="/tmp/aa.txt"
   #cp -r "$FROM" "$TO"
+  cat /tmp/aa.txt
+  rm /tmp/aa.txt
   echo "$(date "+%d.%m.%Y %T") RCLONE UPLOAD FINISHED IN $(($(date +'%s') - $start)) SECONDS" | tee -a $LOGFILE
 fi
 
