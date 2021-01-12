@@ -13,3 +13,14 @@ docker run -it --rm -e TZ=Asia/Calcutta -e to_path="gdrive_team:/poorna/" -e fro
 
 
 note intvl is in min
+
+
+rclone.conf sample 
+
+
+[gdrive_team]
+type = drive
+scope = drive
+service_account_file = /var/gclone/.config/rclone/accounts/xyz.json
+service_account_file_path = /var/gclone/.config/rclone/accounts
+team_drive = asdasf
