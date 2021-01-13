@@ -4,7 +4,7 @@ gclone with time interval for sync
 
 How to run 
 
-docker run -it --rm -e TZ=<timezone> -e to_path="<remotename>:<location where to upload>" -e from_path="<contain mount path for file upload>" -e intvl=<time interval>  -v <rclone path>:/var/gclone/.config/rclone -v <local machine file path>:<contain mount path for file upload> poornatheju/gclone
+docker run -it --rm -e TZ=\<timezone\> -e to_path="\<remotename\>:\<location where to upload\>" -e from_path="\<contain mount path for file upload\>" -e intvl=\<time interval\>  -v \<rclone path\>:/var/gclone/.config/rclone -v \<local machine file path\>:\<contain mount path for file upload\> poornatheju/gclone
 
 
 
